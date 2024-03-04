@@ -3,7 +3,7 @@
 /**
  * bubble_sort - Sorts an array of integers in ascending order
  *
- * @array: Pointer to the first element of the array to be sorted.
+ * @array: The array to be sorted.
  * @size:  Number of elements in the array.
  */
 
@@ -12,10 +12,12 @@ void bubble_sort(int *array, size_t size)
 {
 	size_t i, j;
 	int temp;
-	size_t k;
+	int swapped;
 
 	for (i = 0; i < size - 1; i++)
 	{
+		swapped = 0;
+
 		for (j = 0; j < size - i - 1; j++)
 		{
 			if (array[j] > array[j + 1])
@@ -24,12 +26,12 @@ void bubble_sort(int *array, size_t size)
 				array[j] = array[j + 1];
 				array[j + 1] = temp;
 
-				for (k = 0; k < size; k++)
-				{
-					printf("%d ", array[k]);
-				}
-				printf("\n");
+				swapped = 1;
+
+				print_array(array, size);
 			}
 		}
+		if (!swapped)
+			break;
 	}
 }
