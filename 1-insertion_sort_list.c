@@ -56,7 +56,7 @@ void insertion_sort_list(listint_t **list)
 	node = (*list)->next;
 	while (node)
 	{
-		while (node->next && node->prev->n > node->n)
+		while (node->prev && node->prev->n > node->n)
 		{
 			node = step_down(node, list);
 			print_list(*list);
