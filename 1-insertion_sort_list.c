@@ -60,7 +60,7 @@ void insertion_sort_list(listint_t **list)
 		{
 			node = step_down(node, list);
 			print_list(*list);
-			node = node->next;
 		}
+		node = node->next;
 	}
 }
