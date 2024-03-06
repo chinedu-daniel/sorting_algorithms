@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 Best Case: O(n)
 Average Case: O(n^2)
 Worst Case: O(n^2)
+=======
+O(n)
+O(n^2)
+O(n^2)
+>>>>>>> 4c8fb760b60c3bcc5399866a220515118aef7a49
